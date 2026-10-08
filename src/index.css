@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-white font-sans text-ink antialiased; }
+  button, a, select, input, textarea { @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand; }
+}
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center rounded-full px-6 py-2.5 text-sm font-semibold transition-colors; }
+  .btn-brand { @apply btn bg-brand text-white hover:bg-brand-dark; }
+  .btn-leaf { @apply btn bg-leaf text-white hover:bg-leaf-dark; }
+  .btn-block { @apply flex h-[60px] w-full items-center justify-center rounded-xl text-lg font-semibold transition-colors; }
+  .field { @apply h-[60px] w-full rounded-xl bg-cream px-6 text-base text-ink placeholder:text-ink/50 outline-none ring-brand/60 focus:ring-2; }
+  .page { @apply mx-auto w-full max-w-page px-5 md:px-6; }
+  .h-display { @apply font-serif font-bold text-ink; }
+}
